@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tasty Bite</title>
+<style>
+body{font-family:Arial;background:#fff3e0;margin:0;text-align:center}
+header{background:#54271b;color:white;padding:20px}
+nav{background:#8b321d;padding:15px}
+nav a{color:white;margin:12px;text-decoration:none;cursor:pointer}
+.page{display:none;padding:25px}
+#home{display:block}
+.card{display:inline-block;background:white;width:200px;margin:12px;padding:12px;border-radius:12px;box-shadow:0 2px 8px #aaa}
+img{width:100%;height:130px;object-fit:cover;border-radius:10px}
+button{background:#e87500;color:white;border:0;padding:12px;border-radius:8px;cursor:pointer}
+h2,h3{color:#8b321d}
+footer{background:#54271b;color:white;padding:15px}
+</style>
+<script>
+function show(id){
+document.querySelectorAll('.page').forEach(p=>p.style.display='none');
+document.getElementById(id).style.display='block';
+window.scrollTo(0,0);
+}
+</script>
+</head>
+<body>
+
+<header>
+<h1>🍴 TASTY BITE</h1>
+<p>Delicious Food, Happy Mood!</p>
+</header>
+
+<nav>
+<a onclick="show('home')">🏠 Home</a>
+<a onclick="show('menu')">🍕 Special Menu</a>
+<a onclick="show('delivery')">🚴 Delivery Partners</a>
+</nav>
+
+<section id="home" class="page">
+<h2>Welcome to Tasty Bite!</h2>
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600">
+<p>Enjoy Fresh & Delicious Food Every Day!</p>
+
+<div class="card">
+<h2>🍕</h2>
+<h3>Special Menu</h3>
+<p>Explore Today's Dishes</p>
+<button onclick="show('menu')">View Menu</button>
+</div>
+
+<div class="card">
+<h2>🚴</h2>
+<h3>Delivery Partners</h3>
+<p>Meet Our Delivery Team</p>
+<button onclick="show('delivery')">View Partners</button>
+</div>
+</section>
+
+<section id="menu" class="page">
+<h2>⭐ Today's Special Menu</h2>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400">
+<h3>Cheese Burger</h3><p>₹149</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?w=400">
+<h3>Pizza</h3><p>₹199</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400">
+<h3>Grilled Chicken</h3><p>₹179</p>
+</div>
+<button onclick="show('home')">🏠 Back Home</button>
+</section>
+
+<section id="delivery" class="page">
+<h2>🚴 Our Delivery Partners</h2>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1526367790999-0150786686a2?w=400">
+<h3>Arun</h3><p>Delivery Partner</p>
+<p>20 Minutes</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400">
+<h3>Rahul</h3><p>Delivery Partner</p>
+<p>25 Minutes</p>
+</div>
+<button onclick="show('home')">🏠 Back Home</button>
+</section>
+
+<footer>
+<p>📍 Coimbatore | 📞 9876543210</p>
+<p>© 2026 Tasty Bite Restaurant</p>
+</footer>
+
+</body>
+</html>
